@@ -1,0 +1,57 @@
+#---------------🧠 Time Complexity Order (Best → Worst)-----------#
+| Order | Complexity     | Name         | Example                     |
+| ----- | -------------- | ------------ | --------------------------- |
+| 1     | **O(1)**       | Constant     | `a + b`, array index        |
+| 2     | **O(log n)**   | Logarithmic  | Binary search               |
+| 3     | **O(n)**       | Linear       | Single loop                 |
+| 4     | **O(n log n)** | Linearithmic | Merge sort                  |
+| 5     | **O(n²)**      | Quadratic    | Nested loops                |
+| 6     | **O(n³)**      | Cubic        | Triple loops                |
+| 7     | **O(2ⁿ)**      | Exponential  | Recursion (subset problems) |
+| 8     | **O(n!)**      | Factorial    | Permutations                |
+
+
+#----------------📦 Space Complexity Order------------------------#
+| Order    | Space                              |
+| -------- | ---------------------------------- |
+| O(1)     | Constant (no extra memory)         |
+| O(log n) | Recursive stack (binary recursion) |
+| O(n)     | Arrays, lists                      |
+| O(n²)    | Matrices                           |
+| O(2ⁿ)    | Recursive storage                  |
+
+Big-O = growth rate, not actual time
+
+#----------------🔍 How to Identify (Quick Rules)-------------------#
+
+1. Constant → O(1)
+x = a + b
+
+2. Single loop → O(n)
+for i in range(n):
+    pass
+
+3. Nested loops → O(n²)
+for i in range(n):
+    for j in range(n):
+        pass
+
+4. Divide by 2 → O(log n)
+while n > 1:
+    n //= 2
+
+5. Loop + log → O(n log n)
+for i in range(n):
+    while j > 1:
+        j //= 2
+
+6. Recursion patterns
+| Pattern              | Complexity |
+| -------------------- | ---------- |
+| `T(n) = T(n-1)`      | O(n)       |
+| `T(n) = 2T(n-1)`     | O(2ⁿ)      |
+| `T(n) = T(n/2)`      | O(log n)   |
+| `T(n) = 2T(n/2)`     | O(n)       |
+| `T(n) = 2T(n/2) + n` | O(n log n) |
+
+
